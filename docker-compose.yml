@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  nginx:
+    build: ./nginx
+    container_name: front-nginx
+    ports:
+      - 8083:80
+    volumes:
+      - ./:/app
+    stdin_open: true
+    tty: true
