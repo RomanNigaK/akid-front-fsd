@@ -2,7 +2,6 @@ import { CheckOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button, Form, Input, Space } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { FormProps } from 'antd/lib';
-import { useEffect } from 'react';
 import { Person } from 'entities/person/model/types';
 import { TypePerson } from 'shared/constants/enums';
 import { requiredRule } from 'shared/constants/formRules';

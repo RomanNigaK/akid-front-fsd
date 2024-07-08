@@ -63,7 +63,7 @@ export const PerformedSubjectInspection = observer(({ kitId }: Props) => {
                   {
                     key: '2',
                     label: 'Строительный контроль',
-                    children: <FormControlConstruction />,
+                    children: <FormControlConstruction person={p} />,
                     disabled: true,
                   },
                 ]}

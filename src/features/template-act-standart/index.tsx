@@ -1,1 +1,1 @@
-export { FormFirstCreate } from './ui';
+export { TemplateListStandart } from './ui';
