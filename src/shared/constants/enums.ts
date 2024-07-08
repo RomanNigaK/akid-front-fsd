@@ -1,6 +1,7 @@
 export const enum MainMenuItemsType {
   'set' = 'set',
   'employee' = 'employee',
+  'template' = 'template',
 }
 
 export const enum SetItemsType {
@@ -32,4 +33,8 @@ export enum TypePerson {
   preparationProjectDocumentation,
   exploit,
   performedSubjectInspection,
+}
+
+export enum TemplateName {
+  aosr = 'АОСР',
 }

@@ -8,9 +8,7 @@ import {
   Tooltip,
   notification,
 } from 'antd';
-import {
-  QuestionCircleOutlined,
-} from '@ant-design/icons';
+import { QuestionCircleOutlined } from '@ant-design/icons';
 import { Dispatch, SetStateAction, useEffect } from 'react';
 import { Work } from 'entities/work';
 import { getErrorMessage } from 'shared/lib/getErrorMessage';

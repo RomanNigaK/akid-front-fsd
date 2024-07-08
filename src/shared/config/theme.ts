@@ -24,6 +24,7 @@ const theme: ThemeConfig = {
       darkItemColor: '#575757',
       darkItemSelectedColor: '#575757',
       darkItemHoverColor: '#000',
+      iconSize: 20,
     },
     Table: {
       rowExpandedBg: '#fff',

@@ -6,7 +6,7 @@ import svgrPlugin from 'vite-plugin-svgr';
 import eslintPlugin from 'vite-plugin-eslint';
 
 export default defineConfig({
-  plugins: [react(), viteTsConfigPaths(), svgrPlugin()],
+  plugins: [react(), viteTsConfigPaths(), svgrPlugin(), eslintPlugin()],
   server: {
     proxy: {
       '/api': 'http://localhost:8081/',

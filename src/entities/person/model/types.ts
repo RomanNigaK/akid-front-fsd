@@ -1,17 +1,11 @@
+import { ControlConstruction } from 'entities/controlConstruction';
+import { Representative } from 'entities/representative';
+
 export type Person = {
+  id: string;
   inn: number;
   name: string;
   data: string;
-  representative?: {
-    postCompany: string;
-    fio: string;
-    nrc: string;
-    order: string;
-  };
-  controlConstruction?: {
-    postCompany: string;
-    fio: string;
-    nrc: string;
-    order: string;
-  };
+  representative?: Representative;
+  constructionControl?: ControlConstruction;
 };

@@ -1,0 +1,1 @@
+export { FormPerson } from './form';

@@ -1,8 +1,13 @@
-import { Card, Tabs } from 'antd';
+import { Button, Card, Flex, Space, Tabs } from 'antd';
 import { TabsProps } from 'antd/lib';
 import { observer } from 'mobx-react-lite';
 import { useParams } from 'react-router-dom';
-import { DeveloperForm } from 'features/developer-form';
+import { DeleteOutlined } from '@ant-design/icons';
+import { Developer } from './developer';
+import { Construction } from './construction';
+import { PerformedSubjectInspection } from './performedSubjectInspection';
+import { PreparationProjectDocumentation } from './preparationProjectDocumentation';
+import { Exploit } from './exploit';
 import { ProjectDocumentForm } from 'features/project-document-form';
 
 export const OptionKitPage = observer(() => {
@@ -13,27 +18,27 @@ export const OptionKitPage = observer(() => {
     {
       key: '1',
       label: 'Застройщик (заказчик)',
-      children: <DeveloperForm kitId={kitId} />,
+      children: <Developer kitId={kitId} />,
     },
     {
       key: '2',
       label: 'Лицо, осуществляющее строительство',
-      children: 'Content of Tab Pane 2',
+      children: <Construction kitId={kitId} />,
     },
     {
       key: '3',
       label: 'Лицо, выполнившее работы монтажная организация',
-      children: 'Contfent of Tab Pane 3',
+      children: <PerformedSubjectInspection kitId={kitId} />,
     },
     {
       key: '4',
       label: 'Лицо, осуществляющее проектирование',
-      children: 'Conteffnt of Tab Pane 3',
+      children: <PreparationProjectDocumentation kitId={kitId} />,
     },
     {
       key: '5',
       label: 'Эксплотирующая организация',
-      children: 'Content of Tab Pane 3',
+      children: <Exploit kitId={kitId} />,
     },
     {
       key: '6',
@@ -43,8 +48,17 @@ export const OptionKitPage = observer(() => {
   ];
   return (
     <>
-      <Card title="Представители">
-        <Tabs tabPosition="left" items={items} />
+      <Card
+        title={
+          <Flex justify="space-between">
+            <Space>Компании и их представители</Space>
+            <Button size="large" icon={<DeleteOutlined />} danger>
+              Удалить
+            </Button>
+          </Flex>
+        }
+      >
+        <Tabs tabPosition="left" items={items} destroyInactiveTabPane />
       </Card>
     </>
   );

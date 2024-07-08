@@ -14,9 +14,13 @@ import { OptionKitPage } from 'pages/option-kit';
 import { CapturePage } from 'pages/capture';
 import { ReqistryPage } from 'pages/reqistry';
 import { ProfilePage } from 'pages/profile';
+import { Template } from 'pages/template';
+import { Employee } from 'pages/employee';
 
 export const getHomeUrl = () => '/';
 export const getProfileUrl = () => '/profile';
+export const getTemplateUrl = () => '/template';
+export const getEmployeeUrl = () => '/employee';
 
 export const getWorkUrl = (kitId: string) => `/kit/${kitId}/work`;
 export const getMaterialUrl = (kitId: string) => `/kit/${kitId}/material`;
@@ -96,6 +100,14 @@ export const router = createBrowserRouter([
       {
         path: 'profile',
         element: <ProfilePage />,
+      },
+      {
+        path: 'template',
+        element: <Template />,
+      },
+      {
+        path: 'employee',
+        element: <Employee />,
       },
     ],
   },
